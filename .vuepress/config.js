@@ -52,7 +52,9 @@ module.exports = {
             'markdown/markdown_link.md',
             'markdown/markdown_pic.md'
           ]
+
         },
+        'deploy.md',
         'second.md'
       ],
       '/spring/': [
