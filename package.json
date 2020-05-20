@@ -1,0 +1,20 @@
+{
+  "name": "share",
+  "version": "1.0.0",
+  "description": "学习笔记分享",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build"
+  },
+  "keywords": [
+    "vuepress",
+    "笔记",
+    "smicro"
+  ],
+  "author": "smicro",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-dev-server": "^3.0.0"
+  }
+}
