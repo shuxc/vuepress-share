@@ -1,6 +1,7 @@
 module.exports = {
   title: '学习笔记',
   description: '学习笔记分享，1+1 > 2',
+  base: "/dist/",
   port: 8088,
   configureWebpack: {
     resolve: {
