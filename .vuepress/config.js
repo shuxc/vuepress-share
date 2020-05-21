@@ -24,7 +24,7 @@ module.exports = {
           {text: 'Flink', link: 'https://flink.apache.org/zh/flink-architecture.html'}
         ]
       },
-      {text: 'Github', link: 'https://github.com/shuxc/zoo'},
+      {text: 'Github', link: 'https://github.com/shuxc/vuepress-share'},
       {text: '时间线', link: '/timeline/'},
       {text: '关于', link: '/about/'},
     ],
