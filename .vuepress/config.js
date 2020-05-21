@@ -14,7 +14,6 @@ module.exports = {
     nav: [
       {text: '首页', link: '/'},
       {text: 'VuePress', link: '/vuepress/'},
-      {text: 'zookeeper', link: '/zookeeper/'},
       {text: 'spring', link: '/spring/'},
       {
         text: 'TODO',
@@ -30,20 +29,9 @@ module.exports = {
     ],
     sidebarDepth: 3,
     sidebar: {
-      '/zookeeper/': [
-          {
-            title: 'The zookeeper title ',
-            collapsable: false,
-            children: [
-              'zkconfig/config.md',
-              'zkconfig/test.md'
-            ]
-          },
-        'first.md',
-        'second.md',
-        'third.md'
-      ],
       '/vuepress/': [
+        'local.md',
+        'deploy.md',
         {
           title: 'Markdown语法',
           collapsable: true,
@@ -53,9 +41,7 @@ module.exports = {
             'markdown/markdown_pic.md'
           ]
 
-        },
-        'deploy.md',
-        'second.md'
+        }
       ],
       '/spring/': [
           {
