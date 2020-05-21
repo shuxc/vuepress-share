@@ -6,21 +6,23 @@
 + [Tomcat][2]
 + [Jenkins][3]
 
-实现大概逻辑：
+实现大概逻辑
 + 本地代码提交至GitHub，GitHub将提交代码的event事件通知Jenkins
 + Jenkins接收到通知，触发构建流程
 + Jenkins编译后，将生成的静态页面打包成war文件，部署在tomcat容器中
 + Jenkins将编译部署结果邮件通知相关人员
 ***
 ## GitHub
-*GitHub支持仓库代码变动时，发送通知给相关应用(`Webhooks`)*
-详细操作:
+*GitHub支持仓库代码变动时，发送通知给相关应用*
+
+实现操作
 + 在GitHub上创建仓库，在其对应的`Settings`菜单下选择`Webhooks`，按如图所示设置Jenkins通知地址
 ![webhook](./assets/webhook.png)
 
 ## Tomcat
 *Tomcat用于部署web应用，Jenkins可以通过相关插件将war包部署在Tomcat上*
-详细操作:
+
+实现操作
 + 下载安装Tomcat
 + 添加账户和权限，该账户具有管理Tomcat部署等相关权限
  Tomcat中`tomcat-users.xml`添加相关账号和权限
@@ -41,7 +43,7 @@
 *[Jenkins][3]是开源CI&CD软件领导者， 提供超过1000个插件来支持构建、部署、自动化， 满足任何项目的需要。
 本次编译的VuepPress需要安装`NodeJS`插件，部署时需要操作Tomcat，故还需要安装`Deploy to container Plugin`插件*
 
-详细操作:
+实现操作
 + 下载安装Jenkins
 + 在`系统管理`->`插件管理`中，安装`NodeJS`,`Deploy to container Plugin`插件
 + 在`系统管理`->`全局工具配置`中，设置`NodeJS`信息，编译构建时会用到
@@ -56,7 +58,7 @@
     ![env](./assets/env.png)
     + `构建`运行相关脚本
     ![build](./assets/build.png)
-    vuepressbuild.sh:
+    `vuepressbuild.sh`
      ```shell script
         cd /home/smicro/.jenkins/workspace/VuePress-Share
         echo &pwd
