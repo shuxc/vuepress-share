@@ -13,9 +13,9 @@
 + Jenkins将编译部署结果邮件通知相关人员
 ***
 ## GitHub
-*GitHub支持仓库代码变动时，发送通知给相关应用(Webhooks)*
+*GitHub支持仓库代码变动时，发送通知给相关应用(`Webhooks`)*
 详细操作:
-+ 在GitHub上创建仓库，在其对应的 Settings 菜单下选择 Webhooks ，按如图所示设置Jenkins通知地址
++ 在GitHub上创建仓库，在其对应的`Settings`菜单下选择`Webhooks`，按如图所示设置Jenkins通知地址
 ![webhook](./assets/webhook.png)
 
 ## Tomcat
@@ -23,7 +23,7 @@
 详细操作:
 + 下载安装Tomcat
 + 添加账户和权限，该账户具有管理Tomcat部署等相关权限
- Tomcat中tomcat-users.xml添加相关账号和权限
+ Tomcat中`tomcat-users.xml`添加相关账号和权限
  ```XML doc
     <role rolename="manager"/>　  
     <role rolename="manager-gui"/>　  
@@ -33,17 +33,17 @@
     <user username="tomcat" password="*****" roles="admin-gui,admin,manager-gui,manager,manager-script"/> 
  ```
 ::: tip 提示
-1. 管理Tomcat部署只需要manager-gui，manager-script权限即可
+1. 管理Tomcat部署只需要`manager-gui`，`manager-script`权限即可
 2. Tomcat9以上可能默认不支持非本地IP访问Tomcat管理页面，需修改其相关配置(百度)
 :::
 
 ## Jenkins 
 *[Jenkins][3]是开源CI&CD软件领导者， 提供超过1000个插件来支持构建、部署、自动化， 满足任何项目的需要。
-本次编译的VuepPress需要安装NodeJS，部署时需要操作Tomcat，故还需要安装相关插件*
+本次编译的VuepPress需要安装`NodeJS`插件，部署时需要操作Tomcat，故还需要安装`Deploy to container Plugin`插件*
 
 详细操作:
 + 下载安装Jenkins
-+ 在`系统管理`->`插件管理`中，安装`NodeJS`,`Deploy to container Plugin`插
++ 在`系统管理`->`插件管理`中，安装`NodeJS`,`Deploy to container Plugin`插件
 + 在`系统管理`->`全局工具配置`中，设置`NodeJS`信息，编译构建时会用到
 + 在`新建任务`->`构建一个自由风格的软件项目`中,
 配置相关信息 `General`->`源码管理`->`构建触发器`->`构建环境`->`构建环境`->`构建`->`构建后操作`
